@@ -1,0 +1,10 @@
+.heading {
+  font-size: 2.5rem;
+  color: light-dark(black, white);
+  text-wrap: balance;
+
+  &::selection {
+    background: cyan;
+    color: black;
+  }
+}
