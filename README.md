@@ -64,3 +64,4 @@ This template provides a **lightweight boilerplate** for modern frontend apps us
 ---
 
 > Built with ❤️ by [kr](https://github.com/khushalrathore) — feel free to fork & extend!
+ 
