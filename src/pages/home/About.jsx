@@ -55,8 +55,6 @@ const preStyles = {
     display: 'inline',
     userSelect: 'none',
     fontSize: '1rem',
-    // padding: '8px 8px',
-    textAlign: 'start',
     transition: 'all 50ms',
 };
 const divStyles = {
@@ -69,10 +67,19 @@ const divStyles = {
 export const About = () => {
     const { device, theme } = useUser()
     return (
-        <div style={{ minHeight: 'calc( 100dvh - 2rem )', minWidth: 'calc( 100dvw - 2rem )', position: 'relative' }}>
+        <div style={{ minHeight: 'calc( 100dvh - 2rem )', minWidth: 'calc( 100dvw - 2rem )', position: 'relative', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
             <Absolute children={<Mapper arr={scripts} align='start' heading="SCRIPTS" />} position="bottom" align="left" />
             <Absolute children={<Mapper arr={stack} align='start' heading="STACK" />} position="top" align="left" />
             <Absolute children={<Mapper arr={deps} align='end' heading="DEPS" />} position="bottom" align="right" />
+            <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', gap: 0, userSelect: 'none' }}>
+                {/* <img src={flow} width={'300px'} /> */}
+                <pre style={{ fontSize: '33px', fontWeight: '100', fontStyle: 'italic' }}>
+                    {'flow'}
+                </pre>
+                <pre style={{ fontSize: '34px', fontWeight: '100', fontStyle: 'italic' }}>
+                    {date.getFullYear()}
+                </pre>
+            </div>
         </div>
     )
 }
