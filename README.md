@@ -12,8 +12,6 @@ A minimal React + Vite + Bun project template with out-of-the-box support for:
 
 ---
 
-> <img src="./public/assets/images/deps.png" alt="Preview" height="200px"/>
-
 
 ## 📁 Project Structure
 

@@ -1,13 +1,19 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    visualizer({
-      open: true,
-      filename: 'dist/stats.html',
-    }),
-  ],
+  plugins: [react()],
+  build: {
+    minify: 'esbuild',
+    sourcemap: false,
+    target: 'es2018',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
+  define: {
+    __DEV__: false,
+  },
 });

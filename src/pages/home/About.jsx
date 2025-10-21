@@ -17,7 +17,7 @@ const deps = [
 ].sort((a, b) => a.label.length - b.label.length)
 
 const info = [
-    { label: "517KB", title: 'Build Size - 517KB' },
+    { label: "272KB", title: 'Build Size - 272KB' },
     { label: "repo", link: "https://github.com/khushalrathore/react-vite-bun" },
     { label: "me", link: "https://github.com/khushalrathore" },
 ].sort((a, b) => a.label.length - b.label.length)
