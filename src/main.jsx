@@ -5,24 +5,18 @@ import { UserProvider } from './contexts/User.jsx';
 
 const Providers = () => {
   return (
-    <div className='providers'>
-      <UserProvider>
-        <Routes />
-      </UserProvider>
-    </div>
+    <UserProvider>
+      <Routes />
+    </UserProvider>
   );
 };
 
 export const App = () => {
   return (
-    <div className='app'>
-      <Providers />
-    </div>
+    <Providers />
   );
 };
 
-createRoot( document.getElementById( 'root' ) ).render(
-  <div className='render'>
-    <App />
-  </div>
+createRoot(document.getElementById('root')).render(
+  <App />
 );

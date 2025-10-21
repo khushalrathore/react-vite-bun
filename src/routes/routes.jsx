@@ -1,7 +1,8 @@
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Layout } from "../pages/layout/Layout.jsx";
 import { Home } from "../pages/index.jsx";
-const routes = createBrowserRouter( [
+import { Layout } from "../pages/layout/Layout.jsx";
+const routes = createBrowserRouter([
   {
     path: '/', element: <Layout />,
     children: [
@@ -10,9 +11,9 @@ const routes = createBrowserRouter( [
     ]
   },
   { path: '*', element: <div>404</div> },
-] );
+]);
 export const Routes = () => (
-  <RouterProvider router={ routes } />
+  <RouterProvider router={routes} />
 );
 
 

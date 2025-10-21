@@ -1,46 +1,9 @@
-@import url(./fonts.css);
-@import url(./texts.css);
-@import url(./animations.css);
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  line-height: 1.5;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-text-size-adjust: 100%;
-  color-scheme: light dark;
-  background: light-dark(white, rgb(12, 12, 12));
-}
+@import url(./reset.css);
+@import url(./components.css);
+@import url(./theme.css);
 
 
-body {
-  font-family: system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
-}
-
-#root {
-  isolation: isolate;
-}
-
-img,
-svg,
-video,
-canvas {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
+:root {
+    background: var(--bg-primary);
+    color: var(--text-primary);
 }
