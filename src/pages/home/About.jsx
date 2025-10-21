@@ -20,7 +20,7 @@ const info = [
     { label: "272KB", title: 'Build Size - 272KB' },
     { label: "repo", link: "https://github.com/khushalrathore/react-vite-bun" },
     { label: "me", link: "https://github.com/khushalrathore" },
-].sort((a, b) => a.label.length - b.label.length)
+].sort((a, b) => -a.label.length + b.label.length)
 
 
 const scripts = [
