@@ -1,5 +1,4 @@
 import { useUser } from "../../contexts/User.jsx";
-import flow from "../../assets/images/flow.png"
 const date = new Date();
 const stack = [
     { label: "React" },
@@ -16,6 +15,13 @@ const deps = [
     { label: "react-dom", link: "https://www.npmjs.com/package/react-dom" },
     { label: "react-router-dom", link: "https://www.npmjs.com/package/react-router-dom" }
 ].sort((a, b) => a.label.length - b.label.length)
+
+const info = [
+    { label: "517KB", title: 'Build Size - 517KB' },
+    { label: "repo", link: "https://github.com/khushalrathore/react-vite-bun" },
+    { label: "me", link: "https://github.com/khushalrathore" },
+].sort((a, b) => a.label.length - b.label.length)
+
 
 const scripts = [
     { label: "dev", },
@@ -43,9 +49,9 @@ const fnStyles = (e, i, mode) => {
         e.currentTarget.style.background = 'linear-gradient(108deg, red, orangered)';
         e.currentTarget.style.color = 'white';
         e.currentTarget.style.cursor = 'pointer';
-        if (i.link) {
+        if (i.link || i.title) {
             e.currentTarget.style.textDecoration = 'underline';
-            e.currentTarget.title = new URL(i.link).href.split("https://www.")[1]
+            e.currentTarget.title = i.title ? i.title : (new URL(i.link).href.split("https://")[1])
         }
         return;
     }
@@ -68,8 +74,9 @@ export const About = () => {
     const { device, theme } = useUser()
     return (
         <div style={{ minHeight: 'calc( 100dvh - 2rem )', minWidth: 'calc( 100dvw - 2rem )', position: 'relative', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-            <Absolute children={<Mapper arr={scripts} align='start' heading="SCRIPTS" />} position="bottom" align="left" />
             <Absolute children={<Mapper arr={stack} align='start' heading="STACK" />} position="top" align="left" />
+            <Absolute children={<Mapper arr={info} align='end' heading="INFO" />} position="top" align="right" />
+            <Absolute children={<Mapper arr={scripts} align='start' heading="SCRIPTS" />} position="bottom" align="left" />
             <Absolute children={<Mapper arr={deps} align='end' heading="DEPS" />} position="bottom" align="right" />
             <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', gap: 0, userSelect: 'none' }}>
                 {/* <img src={flow} width={'300px'} /> */}
